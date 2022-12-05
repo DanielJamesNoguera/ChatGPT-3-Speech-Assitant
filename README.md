@@ -7,7 +7,7 @@ openai
 replicate
 pyttsx3
 
-To begin head over to https://beta.openai.com/login/ and make an account. Then generate an API key. Once you have this add it on line 7.
+To begin head over to https://beta.openai.com/login/ and make an account. Then generate an API key. Once you have this add it on line 7. (If you want to do this probably create an environment variable, I'm just lazy)
 
 Then simply execute the file by opening your terminal and running the python file:
 py main.py
