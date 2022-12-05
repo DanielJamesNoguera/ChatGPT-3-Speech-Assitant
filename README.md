@@ -12,6 +12,7 @@ pip install pyttsx3
 pip install openai
 pip install speechrecognition
 pip install replicate
+pip install pyaudio   
 ```
 
 Then head over to https://beta.openai.com/login/ and make an account. Then generate an API key. **Once you have your openAI API Key, add it on line 7**. (If you want to do this probably create an environment variable, I'm just lazy)
