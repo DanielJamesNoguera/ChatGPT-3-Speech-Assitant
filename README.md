@@ -1,5 +1,5 @@
 # OpenAI GPT-3 Virtual Speech Assistant - Community Run
-This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's ChatGPT-3.
+This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's GPT-3 language models so you can talk to the AI through your mic and it will respond through your headphones/speakers.
 
 **Key Points:**
 
