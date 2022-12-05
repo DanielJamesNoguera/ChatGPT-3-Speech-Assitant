@@ -5,6 +5,7 @@ import pyttsx3
 UserVoiceRecognizer = speech_recognition.Recognizer()
 
 OPENAI_API_KEY = "INSERT HERE"
+REPLICATE_API_KEY = "INSERT HERE"
 
 print("Initiating session with Kavani...")
 
@@ -27,7 +28,7 @@ def sendToAi(speech):
         exit()
 
     if "picture" in speech:
-        Replicate = replicate.Client(api_token="b17591de20bb7d829630bce30b76e7366639f6db")
+        Replicate = replicate.Client(api_token=REPLICATE_API_KEY)
         model = Replicate.models.get("stability-ai/stable-diffusion")
         version = model.versions.get("27b93a2413e7f36cd83da926f3656280b2931564ff050bf9575f1fdf9bcd7478")
 
