@@ -6,7 +6,7 @@ This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's ChatGP
 - If you say the word 'goodbye' it will end the session and exit the file.
 - If you say the word 'picture' it will use whatever else you said and use it to generate an image via Replicate. You can opt out of this by using main_no_images.py if you wish.
 
-All the code you need is in main.py, make sure you install the necessary modules via pip; pyttsx3, speech_recognition, openai and replicate (you only need this if you want image generation).
+To get started, install the necessary modules via pip; pyttsx3, speech_recognition, openai and replicate (you only need this if you want image generation).
 
 Then head over to https://beta.openai.com/login/ and make an account. Then generate an API key. Once you have this add it on line 7. (If you want to do this probably create an environment variable, I'm just lazy)
 
