@@ -1,7 +1,7 @@
 # ChatGPT-3-Speech-Assitant
 This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's ChatGPT-3.
 
-*Key Points:*
+**Key Points:**
 If you say the word 'goodbye' it will end the session and exit the file.
 If you say the word 'picture' it will use whatever else you said and use it to generate an image via Replicate. You can opt out of this by using main_no_images.py if you wish.
 
