@@ -10,6 +10,7 @@ To get started, install the necessary modules via pip; pyttsx3, speech_recogniti
 ```
 pip install pyttsx3
 pip install openai
+pip install speechrecognition
 pip install replicate
 ```
 
