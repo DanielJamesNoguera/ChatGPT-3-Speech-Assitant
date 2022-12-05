@@ -3,6 +3,7 @@ This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's ChatGP
 
 **Key Points:**
 
+- Response time will vary based on how bloated OpenAI API is. Typically its up to 10 seconds but 1-2 seconds when operating well.
 - If you say the word 'goodbye' it will end the session and exit the file.
 - If you say the word 'picture' it will use whatever else you said and use it to generate an image via Replicate. You can opt out of this by using main_no_images.py if you wish.
 
