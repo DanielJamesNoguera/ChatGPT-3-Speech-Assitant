@@ -9,7 +9,6 @@ This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's ChatGP
 To get started, install the necessary modules via pip; pyttsx3, speech_recognition, openai and replicate (you only need Replicate if you want image generation).
 ```
 pip install pyttsx3
-pip install speech_recognition
 pip install openai
 pip install replicate
 ```
