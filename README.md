@@ -24,3 +24,5 @@ py main.py (or main_no_images.py)
 It will print the speech it detects from your mic, send that to the openAI API and then play the response through your default speakers.
 
 Enjoy.
+
+**If you have any issues, suggestions etc feel free to DM me on Discord: Daniel 'Kato' James | Arclight#2127**
