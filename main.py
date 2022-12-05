@@ -1,45 +1,29 @@
 import speech_recognition
 import openai
 import replicate
-import azure.cognitiveservices.speech as speechsdk
-
-AZURE_API_KEY = "INSERT HERE"
-AZURE_REGION = "INSERT HERE"
-OPENAI_API_KEY = "INSERT HERE"
-
-# This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
-speech_config = speechsdk.SpeechConfig(subscription=AZURE_API_KEY, region=AZURE_REGION)
-audio_config = speechsdk.audio.AudioOutputConfig(use_default_speaker=True)
-
-# The language of the voice that speaks.
-speech_config.speech_synthesis_voice_name='en-IE-EmilyNeural'
-speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
-
-print("Initiating session...")
- 
-# The Recognizer is initialized.
+import pyttsx3
 UserVoiceRecognizer = speech_recognition.Recognizer()
 
+OPENAI_API_KEY = "INSERT HERE"
+
+print("Initiating session with Kavani...")
+
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id)
+engine.setProperty('rate', 150)
+ 
 openai.api_key = OPENAI_API_KEY
 
 def speak(wordsToBeSpoken):
-    speech_synthesis_result = speech_synthesizer.speak_text_async(wordsToBeSpoken).get()
-
-    if speech_synthesis_result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
-        print("Speech synthesized for text [{}]".format(wordsToBeSpoken))
-    elif speech_synthesis_result.reason == speechsdk.ResultReason.Canceled:
-        cancellation_details = speech_synthesis_result.cancellation_details
-        print("Speech synthesis canceled: {}".format(cancellation_details.reason))
-        if cancellation_details.reason == speechsdk.CancellationReason.Error:
-            if cancellation_details.error_details:
-                print("Error details: {}".format(cancellation_details.error_details))
-                print("Did you set the speech resource key and region values?")
+    engine.say(wordsToBeSpoken)
+    engine.runAndWait()
 
 def sendToAi(speech):
 
     if "goodbye" in speech:
         speak("Goodbye.")
-        print("Ending session.")
+        print("Ending session with Kavani.")
         exit()
 
     if "picture" in speech:
@@ -79,6 +63,7 @@ while(1):
             UserVoiceInput_converted_to_Text = UserVoiceRecognizer.recognize_google(UserVoiceInput)
             UserVoiceInput_converted_to_Text = UserVoiceInput_converted_to_Text.lower()
 
+            print(UserVoiceInput_converted_to_Text)
             sendToAi(UserVoiceInput_converted_to_Text)
     
     except KeyboardInterrupt:
