@@ -7,6 +7,12 @@ This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's ChatGP
 - If you say the word 'picture' it will use whatever else you said and use it to generate an image via Replicate. You can opt out of this by using main_no_images.py if you wish.
 
 To get started, install the necessary modules via pip; pyttsx3, speech_recognition, openai and replicate (you only need this if you want image generation).
+```
+pip install pyttsx3
+pip install speech_recognition
+pip install openai
+pip install replicate
+```
 
 Then head over to https://beta.openai.com/login/ and make an account. Then generate an API key. Once you have this add it on line 7. (If you want to do this probably create an environment variable, I'm just lazy)
 
