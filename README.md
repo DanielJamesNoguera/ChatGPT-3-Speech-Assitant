@@ -1,4 +1,4 @@
-# ChatGPT-3-Speech-Assitant
+# OpenAI GPT-3 Virtual Speech Assistant - Community Run
 This is a quick Speech -> ChatGPT-3 -> Speech wrapper I made for OpenAI's ChatGPT-3.
 
 **Key Points:**
